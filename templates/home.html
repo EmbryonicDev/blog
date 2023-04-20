@@ -5,7 +5,7 @@
     {% block content %} {% for post in post_list %}
     <div class="post-entry">
       <h2>
-        <a href="">{{ post.title }}</a>
+        <a href="{% url 'post_detail' post.pk %} ">{{ post.title }}</a>
         <p>{{ post.body|linebreaksbr}}</p>
       </h2>
     </div>
