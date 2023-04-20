@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 from .models import Post
 
 
@@ -31,3 +32,9 @@ class BlogTests(TestCase):
     def test_url_exists_at_correct_location_detailview(self):
         response = self.client.get("/post/1/")
         self.assertEqual(response.status_code, 200)
+
+    def test_post_listview(self):
+        response = self.client.get(reverse("home"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Nice body content")
+        self.assertTemplateUsed(response, "home.html")
