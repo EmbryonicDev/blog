@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    {% block content %} {% for post in post_list %}
+    <div class="post-entry">
+      <h2>
+        <a href="">{{ post.title }}</a>
+        <p>{{ post.body|linebreaksbr}}</p>
+      </h2>
+    </div>
+    <div>{% endfor %}{% endblock content %}</div>
+  </body>
+</html>
