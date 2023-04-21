@@ -22,3 +22,5 @@ class BlogUpdateView(UpdateView):
     model = Post
     template_name = "post_edit.html"
     fields = ["title", "body"]
+    # To add all fields:
+    # fields = "__all__"
