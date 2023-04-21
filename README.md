@@ -1,3 +1,3 @@
 # 004-blog
 
-## I have now built a basic blog application from scratch! Using the Django admin, I can create, edit, or delete the content. And I used DetailView to create a detailed individual view of each blog post entry
+### With a small amount of code I’ve built a Blog application that allows for creating, reading, updating, and deleting blog posts. This core functionality is known by the acronym CRUD: Create-Read-Update-Delete.
